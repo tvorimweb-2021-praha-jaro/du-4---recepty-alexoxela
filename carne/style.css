@@ -42,6 +42,11 @@ body {
     max-width: 1200px;
 }
 
+p{
+    color: white;
+    text-shadow: 0 0.05rem 0.1rem grey;
+}
+
 .recept_hlavny {background-image: url(images/burger.jpg);}
 .maly_recept1 {background-image: url(images/sushi.jpg);}
 .maly_recept2 {background-image: url(images/kure.jpg);}
@@ -55,7 +60,7 @@ body {
     background-position: center;
     background-size: cover;
     position: relative;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.2rem;
     border: 1px solid white;
 }
 
@@ -70,26 +75,29 @@ body {
     border: 1px solid white;
 }
 
-h2{
-    font-family: 'Source Sans Pro', sans-serif;
+.nazov_hlavny{
     font-size: 1.75rem;
+    padding-right: 1rem;
+}
+
+
+.nazov{
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
+    position: absolute;
+    bottom: 0;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
     color: white;
 }
 
-h3{
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: white; 
-}
+
 
 .recept_hlavny{
     font-size: 1.75rem;
     padding-right: 0.5rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    position: relative;
     bottom: 0;
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
@@ -98,34 +106,15 @@ h3{
   
 }
 
-.jedlo,
-.komentar {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--font-color);
-}
-
 .jedlo {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
-    font-size: 1.2rem;
-    position: absolute;
-    bottom: 0;
-    padding-left: 0.5rem);
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
     padding-bottom:0.5rem;
     color: white;
-}
-
-.recept_hlavny{
-    font-size:1.75rem;
-    padding-right: 1rem;
-}
-
-.jedlo {
+    font-size: 0.8rem;
     position: absolute;
-    left: 0;
-    padding-left:0.5rem;
-    padding-top: 0.5rem;
 }
 
 .komentar{
@@ -133,3 +122,115 @@ h3{
     right: 0;
     padding-top: 0.5rem;
     padding-right: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.recept_hlavny{
+    font-size:1.75rem;
+    padding-right: 1rem;
+}
+
+.male_recepty{
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    bottom: 0;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    color: white;
+    min-height: 200px;
+}
+
+/* ----- min-width: 480px -------- */
+
+@media screen and (min-width: 480px){
+
+    .male_recepty {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .recept_hlavny {
+        min-height: 250px;
+    }
+
+   .recept {
+       min-height: 150px;
+       flex-basis: 50%;
+   }
+
+   .maly_recept1 {order: 1;}
+   .maly_recept3 {order: 2;}
+   .maly_recept2 {order: 3;}
+   .maly_recept4 {order: 4;}
+
+   
+   .maly_recept1,
+   .maly_recept2 {
+       border-right: 0.1rem solid white;
+   }
+
+   .nazov_hlavny {
+        font-size: 2rem;
+    }
+
+    .jedlo {
+        font-size: 1.5rem;
+      }
+   
+    .komentar {
+        padding-top: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* ----- min-width: 860px -------- */
+
+@media screen and (min-width: 860px){
+
+    .hlavna-obrazovka {
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+
+    .recept_hlavny {
+        min-height: 400px;
+        min-width: 400px;
+        order: -1;
+        border-right: 0.1rem solid white;
+    }
+
+    .recept {
+        min-height: 200px;
+        min-width: 200px;
+    }
+
+    .maly_recept1{order: 1;}
+    .maly_recept3{order: 2;}
+    .maly_recept2 {order: 3;}
+    .maly_recept4{order: 4;}
+ 
+    .maly_recept3,
+    .maly_recept4 {
+        border-right: 0.1rem solid white;
+    }
+
+    .jedlo {
+        font-size: 1.75rem;
+    } 
+
+    .nazov_hlavny{
+        font-size: 3rem;
+    }
+
+    .paticka {
+        margin-top: -1rem;
+    }
+   
+}
