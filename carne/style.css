@@ -1,10 +1,6 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
-
-
-/* -------------------------------------------------- */
-
 /*
 pouzivame mobile first pristup
 tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni
@@ -18,222 +14,155 @@ středně široké obrazovky:
 */
 
 
+
+
+/* Prerobila som to odznova s pouzitym flexu, bolo to omnoho jednoduchsie :) */
+
+
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: 2px 2px 5px black;
+    color:white;
 }
 
 .paticka {
     text-align: center;
     font-size: 14px;
     color: silver;
+    display:none;
 }
 
 .paticka a {
     color: silver;
 }
 
-
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
-
-.hlavna-obrazovka{
-    max-width: 1200px;
+h2 {
+    margin:0;
+    font-weight: 800;
+    font-size: 1.3rem;
 }
 
-p{
-    color: white;
-    text-shadow: 0 0.05rem 0.1rem grey;
+.recept{
+    display:flex;
+    padding:1rem;
+    flex-direction: column-reverse;
+    justify-content: space-between;
 }
 
-.recept_hlavny {background-image: url(images/burger.jpg);}
-.maly_recept1 {background-image: url(images/sushi.jpg);}
-.maly_recept2 {background-image: url(images/kure.jpg);}
-.maly_recept3 {background-image: url(images/rajcata.jpg);}
-.maly_recept4 {background-image: url(images/grilovani.jpg);}
+.recept-velky {background-image: url(images/burger.jpg);}
+.recept-maly1 {background-image: url(images/sushi.jpg);}
+.recept-maly2 {background-image: url(images/rajcata.jpg)}
+.recept-maly3 {background-image: url(images/kure.jpg);}
+.recept-maly4 {background-image: url(images/grilovani.jpg)}
 
-.recept_hlavny {
-    min-height: 400px;
-    max-width: 1200px;
+.recept-velky {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    width: 100%;
+}
+
+.recept-velky h2 {
+    font-size: 1.75rem;
+}
+
+.recept-maly1,
+.recept-maly2,
+.recept-maly3,
+.recept-maly4 {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), white;
+    min-height: 90px;
+    width: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 0.2rem;
-    border: 1px solid white;
+    border-top: solid 0.1rem;
 }
 
-.maly_recept1,
-.maly_recept2,
-.maly_recept3,
-.maly_recept4{
-    min-height: 90px;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 0.1rem;
-    border: 1px solid white;
-}
-
-.nazov_hlavny{
-    font-size: 1.75rem;
-    padding-right: 1rem;
-}
-
-
-.nazov{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    position: absolute;
-    bottom: 0;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
+.recept a {
+    text-decoration: none;
     color: white;
-}
-
-
-
-.recept_hlavny{
-    font-size: 1.75rem;
-    padding-right: 0.5rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    bottom: 0;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: white;
-    min-height: 200px;
-  
-}
-
-.jedlo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 0.8rem;
-    padding-left: 0.5rem;
-    padding-bottom:0.5rem;
-    color: white;
-    font-size: 0.8rem;
-    position: absolute;
-}
-
-.komentar{
-    position: absolute;
-    right: 0;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    font-size: 0.8rem;
     font-weight: 400;
-    color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
-.recept_hlavny{
-    font-size:1.75rem;
-    padding-right: 1rem;
-}
-
-.male_recepty{
-    font-size: 1.2rem;
-    padding-right: 0.5rem;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    bottom: 0;
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    color: white;
-    min-height: 200px;
+.odkazy {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ----- min-width: 480px -------- */
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
 
-    .male_recepty {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .recept_hlavny {
+    .recept-velky {
         min-height: 250px;
     }
 
-   .recept {
-       min-height: 150px;
-       flex-basis: 50%;
-   }
-
-   .maly_recept1 {order: 1;}
-   .maly_recept3 {order: 2;}
-   .maly_recept2 {order: 3;}
-   .maly_recept4 {order: 4;}
-
-   
-   .maly_recept1,
-   .maly_recept2 {
-       border-right: 0.1rem solid white;
-   }
-
-   .nazov_hlavny {
+    .recept-velky h2 {
         font-size: 2rem;
     }
 
-    .jedlo {
+    .recept-maly1,
+    .recept-maly2,
+    .recept-maly3,
+    .recept-maly4 {
+        min-height: 150px;
+        flex-basis: 50%;
+    }
+    
+    .recepty-male {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .recept-maly1 {order: 1;}
+    .recept-maly2 {order: 3;}
+    .recept-maly3 {order: 2;
+        border-left: solid 0.1rem;}
+    .recept-maly4 {order: 4;
+        border-left: solid 0.1rem;}
+
+    .recept {
+        padding: 1.25rem;
+    }
+    
+    h2 {
         font-size: 1.5rem;
-      }
-   
-    .komentar {
-        padding-top: 1.25rem;
-        padding-right: 1.25rem;
     }
 }
 
 /* ----- min-width: 860px -------- */
 
-@media screen and (min-width: 860px){
+@media screen and (min-width: 860px) {
 
-    .hlavna-obrazovka {
+    body {
         display: flex;
         justify-content: center;
-        margin: 1rem auto;
     }
 
-    .recept_hlavny {
+   .recept-velky {
         min-height: 400px;
-        min-width: 400px;
-        order: -1;
-        border-right: 0.1rem solid white;
+        min-height: 400px;
     }
-
-    .recept {
-        min-height: 200px;
-        min-width: 200px;
-    }
-
-    .maly_recept1{order: 1;}
-    .maly_recept3{order: 2;}
-    .maly_recept2 {order: 3;}
-    .maly_recept4{order: 4;}
- 
-    .maly_recept3,
-    .maly_recept4 {
-        border-right: 0.1rem solid white;
-    }
-
-    .jedlo {
-        font-size: 1.75rem;
-    } 
-
-    .nazov_hlavny{
+    .recept-velky h2 {
         font-size: 3rem;
     }
 
-    .paticka {
-        margin-top: -1rem;
+    .recept-maly1,
+    .recept-maly2,
+    .recept-maly3,
+    .recept-maly4 {
+        min-height: 200px;
+        min-width: 200px;
+        flex-basis: 50%;
+        border-left: solid 0.1rem;
     }
-   
-}
 
-/* ospravedlnujem sa, ze opat neskoro :) ale dufam, ze to bude dobre urobene.
-tesim sa na komentare */
+    h2 {
+        font-size: 1.75rem;
+    }
+}

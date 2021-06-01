@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 
 <head>
     <meta charset="utf-8">
@@ -8,56 +8,55 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:600,800&amp;subset=latin-ext" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="style.css">
+    <title>Recepty Alexa</title>
 </head>
 
 <body>
 
-    <main class="hlavna-obrazovka">
+    <!-- Prerobila som to cele, nakolko som predtym nepoznala elementy a rozdelenie, takto to dava vacsi zmysel    -->
 
-        <!-- hlavni recept -->
-        <section class="recept recept_hlavny">
-            <p class="nazov nazov_hlavny">Domáci hovädzí burger</h2>
-            <p class="jedlo"> Grilovanie</p>
-            <p class="komentar"> 5 komentárov </p>
-        </section>
-
-        <div class="male_recepty">
-            <!-- maly recept 1 -->
-            <section class="recept maly_recept1">
-                <p class="nazov">Nigiri sushi</h3>
-                <p class="jedlo">Ázijská kuchyňa</p>
-                <p class="komentar">16 komentárov</p>
-            </section>
-
-            <!-- maly recept 2 -->
-            <section class=" recept maly_recept2">
-                <p class="nazov">Chili paradajková omáčka</h3>
-                <p class="jedlo">Omáčky</p>
-                <p class="komentar">23 komentárov</p>
-            </section>
-
-            <!-- maly recept 3 -->
-            <section class="recept maly_recept3">
-                <p class="nazov">Pečené kurča na jablkách</h3>
-                <p class="jedlo">Hydina</p>
-                <p class="komentar">7 komentárov</p>
-            </section>
-
-            <!-- maly recept 4 -->
-            <section class="recept maly_recept4">
-                <p class="nazov">Záhradná grilovačka</h3>
-                <p class="jedlo">Grilovanie</p>
-                <p class="komentar">19 komentárov</p>
-            </section>
+    <article class="recept recept-velky">
+        <h2>Domáci hovädzí burger</h2>
+        <div class="odkazy">
+            <a href="#">Grilovanie</a>
+            <a href="#"> 5 komentárov </a>
         </div>
-    </main>
+    </article>
 
+    <div class="recepty-male">
+        <article class="recept recept-maly1">
+            <h2>Nigiri sushi</h2>
+            <div class="odkazy">
+                <a href="#">Ázijská kuchyňa</a>
+                <a href="#">16 komentárov</a>
+            </div>
+        </article>
+        <article class="recept recept-maly2">
+            <h2>Chili paradajková omáčka</h2>
+            <div class="odkazy">
+                <a href="#">Omáčky</a>
+                <a href="#">23 komentárov</a>
+            </div>
+        </article>
+        <article class="recept recept-maly3">
+            <h2>Pečené kura na jablkách</h2>
+            <div class="odkazy">
+                <a href="#">Hovädzie</a>
+                <a href="#">7 komentárov</a>
+            </div>
+        </article>
+        <article class="recept recept-maly4">
+            <h2>Zahradná grilovačka</h2>
+            <div class="odkazy">
+                <a href="#">Grilovanie</a>
+                <a href="#">19 komentárov</a>
+            </div>
+        </article>
+    </div>
 
     <footer class="paticka">
         <p>Foto &copy; <a href="https://www.flickr.com/photos/68711844@N07/">Michael Stern</a> (licence <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>)</p>
     </footer>
-
-
 </body>
 
 </html>
